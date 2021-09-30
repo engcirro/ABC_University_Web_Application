@@ -1,0 +1,49 @@
+﻿@model IEnumerable<FictionUniversity.Models.Course>
+
+@{
+    ViewBag.Title = "Courses";
+}
+
+<h2>Courses</h2>
+@*<div class=" row">
+    <a class="btn btn-info pull-left" asp-action="Create"><i class="fas fa-plus"></i> Add Course </a>
+</div>*@
+<p>
+    @Html.ActionLink("Create New Course", "Create")
+</p>
+<table class="table table-bordered table-hover">
+    <tr style="background-color:lightgreen">
+        <th>
+            @Html.DisplayNameFor(model => model.Department.DepartmentName)
+        </th>
+        <th>
+            Course        
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Credits)
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department.DepartmentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Credits)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.CourseID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.CourseID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.CourseID })
+        </td>
+    </tr>
+}
+
+</table>

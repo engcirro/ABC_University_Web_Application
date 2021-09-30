@@ -1,0 +1,30 @@
+﻿@model IEnumerable<FictionUniversity.ViewModels.RegistrationDateGroup>
+
+@{
+    ViewBag.Title = "Student Statistics";
+}
+
+<h2>Student registration statistics</h2>
+
+<table class="table-bordered table-hover" ">
+    <tr style="background-color:lightgreen">
+        <th>
+            Registration Date
+        </th>
+        <th>
+            No. of Students
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistrationDate)
+            </td>
+            <td>
+                @item.NumberOfStudents
+            </td>
+        </tr>
+    }
+</table>
