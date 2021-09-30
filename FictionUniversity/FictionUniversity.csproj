@@ -202,6 +202,7 @@
     <Content Include="Images\Banner.jpg" />
     <Content Include="Images\Campus.jpg" />
     <Content Include="Images\Edit.png" />
+    <Content Include="screenshot.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="webfonts\fa-brands-400.svg" />
